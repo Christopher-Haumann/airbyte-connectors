@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "user": {
+        "type": "string"
+      },
+      "userId": {
+        "type": "string"
+      },
+      "workItemId": {
+        "type": "integer"
+      },
+      "workItemName": {
+        "type": "string"
+      },
+      "startTime": {
+        "type": "string"
+      },
+      "date": {
+        "type": "string"
+      },
+      "time": {
+        "type": "integer"
+      },
+      "notes": {
+        "type": "string"
+      },
+      "id": {
+        "type": "string"
+      },
+      "__etag": {
+        "type": "integer"
+      }
+    }
+  }

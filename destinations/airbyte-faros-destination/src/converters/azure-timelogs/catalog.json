@@ -1,0 +1,10 @@
+{
+    "streams": [
+      {
+        "stream": {
+          "name": "mydatasource__azure-timelogs__time_logs"
+        },
+        "destination_sync_mode": "append"
+      }
+    ]
+  }
