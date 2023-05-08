@@ -74,7 +74,7 @@ export class AzureWorkitems {
 
   async checkConnection(): Promise<void> {
     try {
-      const iter = this.getStories();
+      const iter = this.getBoards();
       await iter.next();
     } catch (err: any) {
       let errorMessage = 'Please verify your access token is correct. Error: ';
