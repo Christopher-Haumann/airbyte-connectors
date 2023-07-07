@@ -2,9 +2,9 @@ import {AirbyteLogger, AirbyteStreamBase, StreamKey} from 'faros-airbyte-cdk';
 import {Dictionary} from 'ts-essentials';
 
 import {AzureTimelog, AzureTimelogConfig} from '../azure-timelog';
-//import {Board} from '../models';
+//import {WorkItem} from '../models';
 
-export class Timelogs extends AirbyteStreamBase {
+export class Workitems extends AirbyteStreamBase {
   constructor(
     private readonly config: AzureTimelogConfig,
     protected readonly logger: AirbyteLogger
@@ -13,15 +13,14 @@ export class Timelogs extends AirbyteStreamBase {
   }
 
   getJsonSchema(): Dictionary<any, string> {
-    return require('../../resources/schemas/timelogs.json');
+    return require('../../resources/schemas/workitems.json');
   }
-
   get primaryKey(): StreamKey {
     return 'id';
   }
 
   async *readRecords(): AsyncGenerator<any> {
     const azureTimelog = await AzureTimelog.instance(this.config);
-    yield* azureTimelog.getTimeLogData();
+    yield* azureTimelog.getWorkItemsFromTimelogData();
   }
 }

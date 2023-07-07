@@ -10,8 +10,9 @@ import {
 import VError from 'verror';
 import {AzureTimelog, AzureTimelogConfig} from './azure-timelog';
 
-import {Builds} from './streams';
-import {TimeLogs} from './streams';
+import {Timelogs} from './streams';
+import {Workitems} from './streams';
+import {Workitemsb2c} from './streams';
 
 
 interface SourceConfig extends AirbyteConfig {
@@ -44,7 +45,9 @@ export class azureTimelogSource extends AirbyteSourceBase<AzureTimelogConfig> {
   }
   streams(config: AzureTimelogConfig): AirbyteStreamBase[] {
     return [
-      new TimeLogs(config, this.logger),
+      new Timelogs(config, this.logger),
+      new Workitems(config, this.logger),
+      new Workitemsb2c(config, this.logger)   
     ];
   }
 }

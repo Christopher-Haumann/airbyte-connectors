@@ -1,4 +1,5 @@
-import {Builds} from './builds';
-import {TimeLogs} from './timelogs';
+import {Timelogs} from './timelogs';
+import {Workitems} from './workitems';
+import {Workitemsbtoc} from './workitemsbtoc';
 
-export {Builds, TimeLogs};
+export {Timelogs, Workitems, Workitemsbtoc as Workitemsb2c};

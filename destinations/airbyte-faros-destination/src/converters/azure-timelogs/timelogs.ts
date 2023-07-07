@@ -17,8 +17,17 @@ export class Timelogs extends AzureTimelogsConverter {
       {
         model: 'tms_TimeLog',
         record: {
+          id: String(Timelog.id),
           uid: String(Timelog.id),
           user: Timelog.user,
+          userId: Timelog.userId,
+          workItemId: Timelog.workItemId,
+          workItemName: Timelog.workItemName,
+          startTime: Timelog.startTime,
+          date: Timelog.date,
+          time: Timelog.time,
+          notes: Timelog.notes,
+          __etag: Timelog.__etag,
         },
       },
     ];

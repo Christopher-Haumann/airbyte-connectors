@@ -46,6 +46,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "airbyte-faros-destination": "^0.5.30",
     "faros-airbyte-cdk": "^0.5.12"
   }
 }
